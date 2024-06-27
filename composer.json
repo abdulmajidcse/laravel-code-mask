@@ -1,0 +1,48 @@
+{
+    "name": "abdulmajidcse/laravel-code-mask",
+    "description": "This is a simple Laravel package that help you to manipulate your data.",
+    "type": "library",
+    "keywords": [
+        "PHP",
+        "Laravel",
+        "Laravel Code Mask"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^9.0",
+        "abdulmajidcse/code-mask": "^1.0.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.6",
+        "orchestra/testbench": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Abdulmajidcse\\LaravelCodeMask\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Abdulmajidcse\\LaravelCodeMask\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Abdulmajidcse\\LaravelCodeMask\\LaravelCodeMaskServiceProvider"
+            ],
+            "aliases": {
+                "CodeMaskFacade": "Abdulmajidcse\\LaravelCodeMask\\CodeMaskFacade"
+            }
+        }
+    },
+    "authors": [
+        {
+            "name": "Md Abdul Majid",
+            "email": "abdulmajidcse@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
