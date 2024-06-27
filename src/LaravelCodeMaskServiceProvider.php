@@ -9,7 +9,7 @@ class LaravelCodeMaskServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->singleton('code-mask', function($app) {
+        $this->app->singleton('abdulmajidcse-code-mask', function ($app) {
             return new CodeMask();
         });
     }

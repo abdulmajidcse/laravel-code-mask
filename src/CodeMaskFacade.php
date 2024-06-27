@@ -8,6 +8,6 @@ class CodeMaskFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'code-mask';
+        return 'abdulmajidcse-code-mask';
     }
 }
