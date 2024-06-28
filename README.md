@@ -4,8 +4,8 @@ This is a simple Laravel package that help you to manipulate your data.
 
 ## Requirements
 
-- PHP >=8.0
-- Laravel >= 9.0
+- PHP >=7.4 | >=8.0
+- Laravel >= 8.0 | >= 9.0 | >= 10.0 | >= 11.0
 
 ## Installation
 
