@@ -55,7 +55,7 @@ return [
 
 # Usage
 
-- You'll find all features docs <a href="https://github.com/abdulmajidcse/code-mask" target="_blank">here</a>.
+- You'll find all features docs <a href="https://packagist.org/packages/abdulmajidcse/code-mask" target="_blank">here</a>.
 - Follow the below code how you'll use CodeMaskFacade class.
 
 ```
@@ -69,4 +69,4 @@ echo $hiddenPhoneNumber; // output: 12******90
 ?>
 ```
 
-## Follow the <a href="https://github.com/abdulmajidcse/code-mask" target="_blank">Code Mask</a> documentation to get available methods information.
+## Follow the <a href="https://packagist.org/packages/abdulmajidcse/code-mask" target="_blank">Code Mask</a> documentation to get available methods information.
