@@ -48,7 +48,7 @@ return [
     // ...
     'aliases' => Facade::defaultAliases()->merge([
         // ...
-        'CodeMaskFacade' => Abdulmajidcse\LaravelCodeMask\CodeMaskFacade::class,
+        'CodeMaskFacade' => Abdulmajidcse\LaravelCodeMask\Facades\CodeMaskFacade::class,
     ])->toArray(),
 ];
 ```
@@ -60,13 +60,13 @@ return [
 
 ```
 <?php
-use Abdulmajidcse\LaravelCodeMask\CodeMaskFacade;
+use Abdulmajidcse\LaravelCodeMask\Facades\CodeMaskFacade;
 
 $phoneNumber = "1234567890";
-$hiddenPhoneNumber = CodeMaskFacade::hiddenString($phoneNumber, 2, 2);
+$hidePhoneNumber = CodeMaskFacade::hideString($phoneNumber, 2, 2);
 
-echo $hiddenPhoneNumber; // output: 12******90
+echo $hidePhoneNumber; // output: 12******90
 ?>
 ```
 
-## Follow the <a href="https://packagist.org/packages/abdulmajidcse/code-mask" target="_blank">Code Mask</a> documentation to get available methods/features information.
+**Follow the <a href="https://packagist.org/packages/abdulmajidcse/code-mask" target="_blank">Code Mask</a> documentation to get available methods/features information.**

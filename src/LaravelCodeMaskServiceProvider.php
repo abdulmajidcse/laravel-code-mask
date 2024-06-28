@@ -2,20 +2,15 @@
 
 namespace Abdulmajidcse\LaravelCodeMask;
 
-use Abdulmajidcse\CodeMask\CodeMask;
 use Illuminate\Support\ServiceProvider;
+use Abdulmajidcse\LaravelCodeMask\Services\LaravelCodeMask;
 
 class LaravelCodeMaskServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->singleton('abdulmajidcse-code-mask', function ($app) {
-            return new CodeMask();
+        $this->app->singleton('abdulmajidcse-laravel-code-mask', function ($app) {
+            return new LaravelCodeMask();
         });
-    }
-
-    public function boot()
-    {
-        //
     }
 }

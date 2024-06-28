@@ -2,20 +2,20 @@
 
 namespace Abdulmajidcse\LaravelCodeMask\Tests;
 
-use Abdulmajidcse\LaravelCodeMask\CodeMaskFacade;
+use Abdulmajidcse\LaravelCodeMask\Facades\CodeMaskFacade;
 
 class CodeMaskFacadeTest extends TestCase
 {
-    public function testHiddenString()
+    public function testHideString()
     {
         $phoneNumber = "1234567890";
-        $hiddenPhoneNumber = CodeMaskFacade::hiddenString($phoneNumber, 2, 2);
-        $this->assertEquals('12******90', $hiddenPhoneNumber);
+        $hidePhoneNumber = CodeMaskFacade::hideString($phoneNumber, 2, 2);
+        $this->assertEquals('12******90', $hidePhoneNumber);
     }
 
-    public function testGenerateSerial()
+    public function testGenerateId()
     {
-        $serial = CodeMaskFacade::generateSerial(123, 10, 0, '2701');
-        $this->assertEquals('27010000000123', $serial);
+        $id = CodeMaskFacade::generateId(123, 10, 0, '2701');
+        $this->assertSame('27010000000123', $id);
     }
 }
