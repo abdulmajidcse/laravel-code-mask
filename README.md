@@ -36,7 +36,7 @@ return [
 
 ```
 
-<strong>If you want to use CodeMaskFacade class as an alias, add aliases in your config/app.php file.</strong>
+<strong>Optional: The aliases will automatically get registered. Or you may manually add the aliases in your config/app.php file.</strong>
 
 ```
 <?php
@@ -69,4 +69,4 @@ echo $hiddenPhoneNumber; // output: 12******90
 ?>
 ```
 
-## Follow the <a href="https://packagist.org/packages/abdulmajidcse/code-mask" target="_blank">Code Mask</a> documentation to get available methods information.
+## Follow the <a href="https://packagist.org/packages/abdulmajidcse/code-mask" target="_blank">Code Mask</a> documentation to get available methods/features information.
