@@ -27,46 +27,43 @@ composer require abdulmajidcse/laravel-code-mask
 - For Laravel v11 or upper (In your bootstrap/providers.php file).
 
 ```
-<?php
-
 return [
     // ...
     Abdulmajidcse\LaravelCodeMask\LaravelCodeMaskServiceProvider::class,
 ];
-
 ```
 
 <strong>Optional: The aliases will automatically get registered. Or you may manually add the aliases in your config/app.php file.</strong>
 
 ```
-<?php
-
-// ...
-use Illuminate\Support\Facades\Facade;
-
-return [
+'aliases' => Facade::defaultAliases()->merge([
     // ...
-    'aliases' => Facade::defaultAliases()->merge([
-        // ...
-        'CodeMaskFacade' => Abdulmajidcse\LaravelCodeMask\Facades\CodeMaskFacade::class,
-    ])->toArray(),
-];
+    'CodeMaskFacade' => Abdulmajidcse\LaravelCodeMask\Facades\CodeMaskFacade::class,
+])->toArray(),
 ```
 
 # Usage
+You'll see code example so that you can guess where you have to use it.
 
-- You'll find all features docs <a href="https://packagist.org/packages/abdulmajidcse/code-mask" target="_blank">here</a>.
-- Follow the below code how you'll use CodeMaskFacade class.
+## Hide String
+Sometimes, you need to hide phone, email or any other text with your special letter like 12****90. For this type of tasks, you can follow below code sample.
 
 ```
-<?php
 use Abdulmajidcse\LaravelCodeMask\Facades\CodeMaskFacade;
 
 $phoneNumber = "1234567890";
 $hidePhoneNumber = CodeMaskFacade::hideString($phoneNumber, 2, 2);
 
 echo $hidePhoneNumber; // output: 12******90
-?>
 ```
 
-**Follow the <a href="https://packagist.org/packages/abdulmajidcse/code-mask" target="_blank">Code Mask</a> documentation to get available methods/features information.**
+## Generate ID
+Suppose, you have to generate an ID or any other string based ID with a special format. To do this, you can follow below code sample.
+
+```
+use Abdulmajidcse\LaravelCodeMask\Facades\CodeMaskFacade;
+
+$id = CodeMaskFacade::generateId(123, 10, 0, '2701');
+
+echo $id; // output: 27010000000123
+```
